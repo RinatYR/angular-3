@@ -1,0 +1,23 @@
+<app-top-bar></app-top-bar>
+
+<div class="container">
+  <router-outlet></router-outlet>
+  <div class="panel">
+        <div><input [(ngModel)]="name" placeholder = "Модель" />
+            <button (click)="addItem('name', name)">Добавить</button>
+            <button (click)="load('name')">Загрузить</button>
+            <button (click)="reset()">Сброс</button>
+        </div>
+        <table>
+            <tr *ngFor="let item of items">
+                <td>{{item}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
